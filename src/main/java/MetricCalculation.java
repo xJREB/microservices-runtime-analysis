@@ -24,7 +24,7 @@ public class MetricCalculation {
      * @param graph         collected runtime data in canonical format
      * @return list of calculated metrics
      */
-    public ArrayList<Metric> calculateMetrics(Configuration configuration,
+    public List<Metric> calculateMetrics(Configuration configuration,
             DefaultDirectedGraph<Service, DefaultEdge> graph) {
 
         ArrayList<Metric> metrics = new ArrayList<>();

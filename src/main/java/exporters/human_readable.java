@@ -1,7 +1,7 @@
 package exporters;
 
 import java.io.PrintWriter;
-import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 import helper.Logger;
 import helper.StringUtils;
@@ -23,8 +23,7 @@ public class human_readable implements ExporterInterface {
      * @return true if the export was successful, else false
      */
     @Override
-    public Boolean exportResults(Configuration configuration, Map params,
-            ArrayList<Metric> metrics) {
+    public Boolean exportResults(Configuration configuration, Map params, List<Metric> metrics) {
 
         // Check if required params are set
         if ((params == null) || (!params.containsKey("filename"))) {
@@ -150,7 +149,6 @@ public class human_readable implements ExporterInterface {
         // Write result to file
         try (PrintWriter writer = new PrintWriter(params.get("filename").toString(), "UTF-8")) {
             writer.print(output);
-            writer.close();
         } catch (Exception e) {
             Logger.err("         Error: Could not write to file \""
                     + params.get("filename").toString() + "\": " + e.getMessage());

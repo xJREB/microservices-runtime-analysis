@@ -2,8 +2,8 @@ package exporters;
 
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Collections;
+import java.util.List;
 import java.util.Map;
 import com.google.gson.GsonBuilder;
 import org.json.simple.JSONArray;
@@ -28,8 +28,7 @@ public class json implements ExporterInterface {
      */
     @SuppressWarnings("unchecked")
     @Override
-    public Boolean exportResults(Configuration configuration, Map params,
-            ArrayList<Metric> metrics) {
+    public Boolean exportResults(Configuration configuration, Map params, List<Metric> metrics) {
 
         // Check if required params are set
         if ((params == null) || (!params.containsKey("filename"))) {
@@ -150,8 +149,6 @@ public class json implements ExporterInterface {
         try (FileWriter file = new FileWriter(params.get("filename").toString())) {
             file.write(new GsonBuilder().setPrettyPrinting().create().toJson(json));
             file.flush();
-            file.close();
-
         } catch (IOException e) {
             Logger.err("         Error: Could not write to file \""
                     + params.get("filename").toString() + "\": " + e.getMessage());

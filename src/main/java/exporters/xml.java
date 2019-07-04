@@ -1,7 +1,7 @@
 package exporters;
 
 import java.io.File;
-import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 import javax.xml.XMLConstants;
 import javax.xml.parsers.DocumentBuilder;
@@ -32,8 +32,7 @@ public class xml implements ExporterInterface {
      * @return true if the export was successful, else false
      */
     @Override
-    public Boolean exportResults(Configuration configuration, Map params,
-            ArrayList<Metric> metrics) {
+    public Boolean exportResults(Configuration configuration, Map params, List<Metric> metrics) {
 
         // Check if required params are set
         if ((params == null) || (!params.containsKey("filename"))) {

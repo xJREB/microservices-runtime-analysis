@@ -1,6 +1,6 @@
 package interfaces;
 
-import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 import models.Configuration;
 import models.Metric;
@@ -18,6 +18,6 @@ public interface ExporterInterface {
      * @param metrics       calculated metrics
      * @return true if the export was successful, else false
      */
-    Boolean exportResults(Configuration configuration, Map params, ArrayList<Metric> metrics);
+    Boolean exportResults(Configuration configuration, Map params, List<Metric> metrics);
 
 }

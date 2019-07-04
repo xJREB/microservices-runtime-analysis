@@ -1,5 +1,5 @@
-import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import org.jgrapht.graph.DefaultDirectedGraph;
 import org.jgrapht.graph.DefaultEdge;
 import helper.ArgumentParser;
@@ -107,7 +107,7 @@ public class Main {
         Logger.out("   Starting metric calculation");
 
         MetricCalculation metricCalculation = new MetricCalculation();
-        ArrayList<Metric> metrics = metricCalculation.calculateMetrics(configuration, graph);
+        List<Metric> metrics = metricCalculation.calculateMetrics(configuration, graph);
 
         endTime = (int) Math.ceil((new Date().getTime() - startTime) / 1000.0);
         Logger.out("   Metric calculation finished after " + endTime + " seconds");

@@ -2,7 +2,7 @@ package exporters;
 
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVPrinter;
@@ -25,8 +25,7 @@ public class csv implements ExporterInterface {
      * @return true if the export was successful, else false
      */
     @Override
-    public Boolean exportResults(Configuration configuration, Map params,
-            ArrayList<Metric> metrics) {
+    public Boolean exportResults(Configuration configuration, Map params, List<Metric> metrics) {
 
         // Check if required params are set
         if ((params == null) || (!params.containsKey("filename"))) {
@@ -116,8 +115,6 @@ public class csv implements ExporterInterface {
 
             csvPrinter.flush();
             file.flush();
-            file.close();
-
         } catch (IOException e) {
             Logger.err("         Error: Could not write to file \""
                     + params.get("filename").toString() + "\": " + e.getMessage());
