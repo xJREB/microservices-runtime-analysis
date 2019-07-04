@@ -1,3 +1,6 @@
+[![Actions Status](https://wdp9fww0r9.execute-api.us-west-2.amazonaws.com/production/badge/xJREB/microservices-runtime-analysis)](https://wdp9fww0r9.execute-api.us-west-2.amazonaws.com/production/results/xJREB/microservices-runtime-analysis)
+[![Sonarcloud Dashboard](https://sonarcloud.io/api/project_badges/measure?project=xJREB_microservices-runtime-analysis&metric=alert_status)](https://sonarcloud.io/dashboard?id=xJREB_microservices-runtime-analysis)
+
 # Runtime Calculator for Service-Based Maintainability Metrics
 
 This Java CLI application uses operational data produced by service- or microservice-based systems for the calculation of service-based maintainability metrics. It collects runtime data by using integrators (e.g. via OpenTracing), calculates maintainability metrics, and uses exporters to output the results (e.g. as a JSON file).
