@@ -1,4 +1,4 @@
-[![Actions Status](https://wdp9fww0r9.execute-api.us-west-2.amazonaws.com/production/badge/xJREB/microservices-runtime-analysis)](https://wdp9fww0r9.execute-api.us-west-2.amazonaws.com/production/results/xJREB/microservices-runtime-analysis)
+[![Actions Status](https://wdp9fww0r9.execute-api.us-west-2.amazonaws.com/production/badge/xjreb/microservices-runtime-analysis)](https://wdp9fww0r9.execute-api.us-west-2.amazonaws.com/production/results/xjreb/microservices-runtime-analysis)
 [![Sonarcloud Dashboard](https://sonarcloud.io/api/project_badges/measure?project=xJREB_microservices-runtime-analysis&metric=alert_status)](https://sonarcloud.io/dashboard?id=xJREB_microservices-runtime-analysis)
 
 # Runtime Calculator for Service-Based Maintainability Metrics
