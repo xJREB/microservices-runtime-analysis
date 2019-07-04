@@ -1,0 +1,636 @@
+# Number of Services Involved in the Compound Service (NSIC)
+
+## Description
+Number of services involved in the compound service
+
+## Interpretation
+Value range: [0,14], lower is better
+
+## Results
+
+- mine: 8
+- fanout: 8
+- entry-cache: 1
+- index: 1
+- follow: 7
+- timeline0: 7
+- home: 8
+- timeline1: 7
+- search: 9
+- post: 10
+- reserve: 1
+- api: 11
+- timeline-shard: 1
+- entry-store: 7
+
+
+# Services Interdependence in the System (SIY)
+
+## Description
+Count of pairs of services which depend on each other
+
+## Interpretation
+Value range: [0,91], lower is better
+
+## Result
+2
+
+
+# Absolute Importance of the Service (AIS)
+
+## Description
+Number of services which depend on a service
+
+## Interpretation
+Value range: [0,13], lower is better
+
+## Results
+
+- mine: 0
+- fanout: 1
+- entry-cache: 3
+- index: 2
+- follow: 5
+- timeline0: 3
+- home: 0
+- timeline1: 3
+- search: 0
+- post: 1
+- reserve: 3
+- api: 0
+- timeline-shard: 3
+- entry-store: 3
+
+
+# Absolute Dependence of the Service (ADS)
+
+## Description
+Number of other services a service depends on
+
+## Interpretation
+Value range: [0,13], lower is better
+
+## Results
+
+- mine: 2
+- fanout: 1
+- entry-cache: 0
+- index: 0
+- follow: 6
+- timeline0: 2
+- home: 3
+- timeline1: 2
+- search: 2
+- post: 4
+- reserve: 0
+- api: 2
+- timeline-shard: 0
+- entry-store: 3
+
+
+# Absolute Criticality of the Service (ACS)
+
+## Description
+Product of its absolute importance (AIS) and absolute dependence (ADS)
+
+## Interpretation
+Value range: [0,169], lower is better
+
+## Results
+
+- mine: 0
+- fanout: 1
+- entry-cache: 0
+- index: 0
+- follow: 30
+- timeline0: 6
+- home: 0
+- timeline1: 6
+- search: 0
+- post: 4
+- reserve: 0
+- api: 0
+- timeline-shard: 0
+- entry-store: 9
+
+
+# Number of Services (NS)
+
+## Description
+Number of services in the system
+
+## Interpretation
+Value range: [0,INF), lower is better
+
+## Result
+14
+
+
+# Relative Coupling of Service (RCS)
+
+## Description
+Degree to which a service depends on the other services
+
+## Interpretation
+Value range: [0,100), lower is better
+
+## Results
+
+- mine: 14%
+- fanout: 7%
+- entry-cache: 0%
+- index: 0%
+- follow: 43%
+- timeline0: 14%
+- home: 21%
+- timeline1: 14%
+- search: 14%
+- post: 28%
+- reserve: 0%
+- api: 14%
+- timeline-shard: 0%
+- entry-store: 21%
+
+
+# Relative Importance of Service (RIS)
+
+## Description
+Degree to which the other services depend on a service
+
+## Interpretation
+Value range: [0,100), lower is better
+
+## Results
+
+- mine: 0%
+- fanout: 7%
+- entry-cache: 21%
+- index: 14%
+- follow: 36%
+- timeline0: 21%
+- home: 0%
+- timeline1: 21%
+- search: 0%
+- post: 7%
+- reserve: 21%
+- api: 0%
+- timeline-shard: 21%
+- entry-store: 21%
+
+
+# Service Coupling Factor (SCF)
+
+## Description
+Indicates the overall coupling in the system, the sum over all single coupling values is set in relation with the maximum couplings that could occur in the system
+
+## Interpretation
+Value range: [0,1], lower is better
+
+## Result
+0.15
+
+
+# Weighted Service Interface Count (WSIC)
+
+## Description
+Weighted number of exposed interfaces or operations per service (all weights = 1.0)
+
+## Interpretation
+Value range: [0,INF), lower is better
+
+## Results
+
+- mine: 0.0
+- fanout: 2.0
+- entry-cache: 3.0
+- index: 3.0
+- follow: 2.0
+- timeline0: 2.0
+- home: 0.0
+- timeline1: 2.0
+- search: 0.0
+- post: 1.0
+- reserve: 2.0
+- api: 0.0
+- timeline-shard: 4.0
+- entry-store: 2.0
+
+
+# Service Composition Pattern (SCP)
+
+## Description
+Fraction of services which are composite
+
+## Interpretation
+Value range: [0,100], lower is better
+
+## Result
+71%
+
+
+# Inverse of Average Number of Used Message (IAUM)
+
+## Description
+Ratio between number of services and message types
+
+## Interpretation
+Value range: (0,1], very low values should be avoided
+
+## Result
+0.61
+
+
+# Service Interface Usage Cohesion (SIUC)
+
+## Description
+Quantifies cohesion of a service based on the number of operations invoked by every client
+
+## Interpretation
+Value range: (0,100], higher is better
+
+## Results
+
+- timeline1: 50%
+- fanout: 100%
+- post: 100%
+- reserve: 100%
+- entry-cache: 67%
+- index: 50%
+- follow: 50%
+- timeline-shard: 75%
+- entry-store: 50%
+- timeline0: 50%
+
+
+# Service Interface Data Cohesion (SIDC)
+
+## Description
+Quantifies cohesion of a service based on the number of operations sharing the same input parameter types
+
+## Interpretation
+Value range: [0,100], higher is better
+
+## Results
+
+- timeline1: 100%
+- fanout: 0%
+- post: 100%
+- reserve: 100%
+- entry-cache: 67%
+- index: 67%
+- follow: 100%
+- timeline-shard: 100%
+- entry-store: 100%
+- timeline0: 100%
+
+
+# Response for Operation (RFO)
+
+## Description
+Cardinality of the set of other service interfaces that can be executed in response to invocations with all possible parameters
+
+## Interpretation
+Value range: [0,INF), lower is better
+
+## Results
+
+- timeline1:
+    - \[timeline:insert\]: 0
+    - \[timeline:list\]: 1
+
+- fanout:
+    - \[fanout:entry\]: 1
+    - \[info:entry\]: 0
+
+- post:
+    - \[post:entry\]: 1
+
+- reserve:
+    - \[reserve:remove\]: 0
+    - \[reserve:create\]: 0
+
+- entry-cache:
+    - \[kind:entry, store:list\]: 0
+    - \[kind:entry, store:save\]: 0
+    - \[cache:true, kind:entry, store:\*\]: 0
+
+- index:
+    - \[info:entry\]: 0
+    - \[search:insert\]: 1
+    - \[search:query\]: 0
+
+- follow:
+    - \[follow:user\]: 2
+    - \[follow:list\]: 1
+
+- timeline-shard:
+    - \[timeline:insert\]: 0
+    - \[shard:0, timeline:\*\]: 1
+    - \[shard:1, timeline:\*\]: 0
+    - \[timeline:list\]: 1
+
+- entry-store:
+    - \[kind:entry, store:save\]: 1
+    - \[kind:entry, store:list\]: 0
+
+- timeline0:
+    - \[timeline:insert\]: 0
+    - \[timeline:list\]: 1
+
+## Details
+
+- follow (\[follow:user\]): \[kind:entry,store:\*, timeline:\*\]
+- follow (\[follow:list\]): \[search:\*\]
+- timeline1 (\[timeline:list\]): \[follow:\*\]
+- timeline-shard (\[shard:0, timeline:\*\]): \[follow:\*\]
+- timeline-shard (\[timeline:list\]): \[follow:\*\]
+- entry-store (\[kind:entry, store:save\]): \[info:entry\]
+- post (\[post:entry\]): \[kind:entry,store:\*\]
+- fanout (\[fanout:entry\]): \[follow:\*\]
+- index (\[search:insert\]): \[follow:\*\]
+- timeline0 (\[timeline:list\]): \[follow:\*\]
+
+
+# Total Response for Service (TRS)
+
+## Description
+Sum of RFO values for all operations
+
+## Interpretation
+Value range: [0,INF), lower is better
+
+## Result
+11
+
+
+# Mean Absolute Importance/Dependence in the System (MAIDS)
+
+## Description
+Mean number of services which depend on a service / Mean number of services a service depends on
+
+## Interpretation
+Value range: [0,13], lower is better
+
+## Result
+1.93
+
+
+# Mean Absolute Coupling in the System (MACS)
+
+## Description
+Mean number of services which depend on a service or a service depends on
+
+## Interpretation
+Value range: [0,26], lower is better
+
+## Result
+3.86
+
+
+# Dynamic Relative Dependence of Service (DRDS)
+
+## Description
+Degree to which a service uses other services in terms of calls
+
+## Interpretation
+Value range: (0,100], higher is better
+
+## Results
+
+- mine:
+    - entry-cache: 70%
+    - entry-store: 30%
+
+- timeline1:
+    - reserve: 43%
+    - follow: 56%
+
+- search:
+    - index: 51%
+    - follow: 49%
+
+- fanout:
+    - follow: 100%
+
+- post:
+    - fanout: 27%
+    - entry-cache: 31%
+    - index: 27%
+    - entry-store: 15%
+
+- api:
+    - post: 56%
+    - follow: 43%
+
+- follow:
+    - timeline1: 11%
+    - reserve: 27%
+    - entry-cache: 16%
+    - timeline-shard: 36%
+    - entry-store: 2%
+    - timeline0: 7%
+
+- entry-store:
+    - timeline1: 19%
+    - timeline-shard: 67%
+    - timeline0: 14%
+
+- timeline0:
+    - reserve: 36%
+    - follow: 64%
+
+- home:
+    - timeline1: 18%
+    - timeline-shard: 67%
+    - timeline0: 16%
+
+
+# Dynamic Relative Importance of Service (DRIS)
+
+## Description
+Degree to which other services depend on a service in terms of calls
+
+## Interpretation
+Value range: (0,100], higher is better
+
+## Results
+
+- timeline1:
+    - follow: 28%
+    - entry-store: 24%
+    - home: 47%
+
+- fanout:
+    - post: 100%
+
+- post:
+    - api: 100%
+
+- reserve:
+    - timeline1: 27%
+    - follow: 55%
+    - timeline0: 18%
+
+- entry-cache:
+    - mine: 41%
+    - post: 41%
+    - follow: 18%
+
+- index:
+    - search: 63%
+    - post: 37%
+
+- follow:
+    - timeline1: 16%
+    - search: 45%
+    - fanout: 14%
+    - api: 12%
+    - timeline0: 14%
+
+- timeline-shard:
+    - follow: 27%
+    - entry-store: 23%
+    - home: 50%
+
+- entry-store:
+    - mine: 44%
+    - post: 50%
+    - follow: 6%
+
+- timeline0:
+    - follow: 23%
+    - entry-store: 23%
+    - home: 54%
+
+
+# Dynamic Relative Dependence of Service in the System (DRDSS)
+
+## Description
+Degree to which a service uses other services in terms of calls compared to all calls system-wide
+
+## Interpretation
+Value range: (0,100], lower is better
+
+## Results
+
+- mine:
+    - entry-cache: 6%
+    - entry-store: 3%
+
+- timeline1:
+    - reserve: 2%
+    - follow: 3%
+
+- search:
+    - index: 9%
+    - follow: 8%
+
+- fanout:
+    - follow: 3%
+
+- post:
+    - fanout: 5%
+    - entry-cache: 6%
+    - index: 5%
+    - entry-store: 3%
+
+- api:
+    - post: 3%
+    - follow: 2%
+
+- follow:
+    - timeline1: 2%
+    - reserve: 4%
+    - entry-cache: 3%
+    - timeline-shard: 6%
+    - entry-store: 0%
+    - timeline0: 1%
+
+- entry-store:
+    - timeline1: 1%
+    - timeline-shard: 5%
+    - timeline0: 1%
+
+- timeline0:
+    - reserve: 1%
+    - follow: 3%
+
+- home:
+    - timeline1: 3%
+    - timeline-shard: 11%
+    - timeline0: 3%
+
+
+# Dynamic Relative Importance of Service in the System (DRISS)
+
+## Description
+Degree to which other services depend on a service in terms of calls compared to all calls system-wide
+
+## Interpretation
+Value range: (0,100], lower is better
+
+## Results
+
+- timeline1:
+    - follow: 2%
+    - entry-store: 1%
+    - home: 3%
+
+- fanout:
+    - post: 5%
+
+- post:
+    - api: 3%
+
+- reserve:
+    - timeline1: 2%
+    - follow: 4%
+    - timeline0: 1%
+
+- entry-cache:
+    - mine: 6%
+    - post: 6%
+    - follow: 3%
+
+- index:
+    - search: 9%
+    - post: 5%
+
+- follow:
+    - timeline1: 3%
+    - search: 8%
+    - fanout: 3%
+    - api: 2%
+    - timeline0: 3%
+
+- timeline-shard:
+    - follow: 6%
+    - entry-store: 5%
+    - home: 11%
+
+- entry-store:
+    - mine: 3%
+    - post: 3%
+    - follow: 0%
+
+- timeline0:
+    - follow: 1%
+    - entry-store: 1%
+    - home: 3%
+
+
+# Cyclic Service Dependencies (CSD)
+
+## Description
+Number of cycles in the dependencies
+
+## Interpretation
+Value range: [0,18348340022], lower is better
+
+## Result
+2
+
+## Details
+
+- follow --> entry-store --> timeline1 --> follow
+- follow --> entry-store --> timeline0 --> follow
