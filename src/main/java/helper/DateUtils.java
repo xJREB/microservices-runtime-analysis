@@ -11,6 +11,10 @@ import java.util.Date;
  */
 public class DateUtils {
 
+    private DateUtils() {
+        throw new IllegalStateException("Utility class");
+    }
+
     /**
      * Converts a date string of format yyyy/MM/dd HH:mm:ss into an unix timestamp
      * 

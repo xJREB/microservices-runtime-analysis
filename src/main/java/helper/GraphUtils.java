@@ -13,6 +13,10 @@ import models.Service;
  */
 public class GraphUtils {
 
+    private GraphUtils() {
+        throw new IllegalStateException("Utility class");
+    }
+
     /**
      * Calculates the maximum number of cycles in a complete graph
      * 
@@ -30,8 +34,8 @@ public class GraphUtils {
         for (int k = 3; k <= size; k++) {
 
             sum += (MathUtils.factorial(size)
-                    / (MathUtils.factorial(k) * MathUtils.factorial(size - k)))
-                    * MathUtils.factorial(k - 1);
+                    / (MathUtils.factorial(k) * MathUtils.factorial((long) size - k)))
+                    * MathUtils.factorial((long) k - 1);
 
         }
 

@@ -12,6 +12,10 @@ import javax.net.ssl.HttpsURLConnection;
  */
 public class NetworkUtils {
 
+    private NetworkUtils() {
+        throw new IllegalStateException("Utility class");
+    }
+
     /**
      * Fetches a http document from an url
      * 

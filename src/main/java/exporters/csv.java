@@ -24,7 +24,6 @@ public class csv implements ExporterInterface {
      * @param metrics       calculated metrics
      * @return true if the export was successful, else false
      */
-    @SuppressWarnings("unchecked")
     @Override
     public Boolean exportResults(Configuration configuration, Map params,
             ArrayList<Metric> metrics) {
@@ -37,13 +36,11 @@ public class csv implements ExporterInterface {
         }
 
         // Write results to file
-        try {
-
-            FileWriter file = new FileWriter(params.get("filename").toString());
-            CSVPrinter csvPrinter = new CSVPrinter(file,
-                    CSVFormat.DEFAULT.withHeader("Name", "Abbreviation", "Description",
-                            "Interpretation", "Result Status", "Result 1", "Result 2", "Result 3",
-                            "Details"));
+        try (FileWriter file = new FileWriter(params.get("filename").toString());
+                CSVPrinter csvPrinter = new CSVPrinter(file,
+                        CSVFormat.DEFAULT.withHeader("Name", "Abbreviation", "Description",
+                                "Interpretation", "Result Status", "Result 1", "Result 2",
+                                "Result 3", "Details"))) {
 
             for (Metric metric : metrics) {
 

@@ -142,8 +142,7 @@ public class markdown implements ExporterInterface {
         }
 
         // Write result to file
-        try {
-            PrintWriter writer = new PrintWriter(params.get("filename").toString(), "UTF-8");
+        try (PrintWriter writer = new PrintWriter(params.get("filename").toString(), "UTF-8")) {
             writer.print(output);
             writer.close();
         } catch (Exception e) {

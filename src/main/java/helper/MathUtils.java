@@ -7,6 +7,10 @@ import java.util.Locale;
  */
 public class MathUtils {
 
+    private MathUtils() {
+        throw new IllegalStateException("Utility class");
+    }
+
     /**
      * Limits a double value to two fractional digits
      * 

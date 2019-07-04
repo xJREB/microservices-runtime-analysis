@@ -11,14 +11,15 @@ import models.Operation;
 import models.Service;
 
 /**
- * Class to calculate the metric DRDSS
- * Description: Degree to which a service uses other services in terms of calls compared to all calls system-wide
- * Source: S. Schlinger, Benutzung von Laufzeitdaten für die Wartbarkeitsanalyse von Service- und Microservice-basierten Systemen, 2019
+ * Class to calculate the metric DRDSS Description: Degree to which a service uses other services in
+ * terms of calls compared to all calls system-wide Source: S. Schlinger, Benutzung von
+ * Laufzeitdaten für die Wartbarkeitsanalyse von Service- und Microservice-basierten Systemen, 2019
  */
 public class _020_DRDSS implements MetricInterface {
 
     /**
      * Calculates the metric from the provided runtime data
+     * 
      * @param graph runtime data to be used
      * @return calculated metric
      */
@@ -60,7 +61,9 @@ public class _020_DRDSS implements MetricInterface {
 
         for (Map.Entry<String, Map<String, Double>> nestedResult : nestedResults.entrySet()) {
             for (Map.Entry<String, Double> entry : nestedResult.getValue().entrySet()) {
-                entry.setValue(MathUtils.formatDouble(entry.getValue() / callCounterSystem));
+                if (callCounterSystem != 0) {
+                    entry.setValue(MathUtils.formatDouble(entry.getValue() / callCounterSystem));
+                }
             }
         }
 

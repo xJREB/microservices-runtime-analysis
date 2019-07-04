@@ -11,14 +11,15 @@ import models.Operation;
 import models.Service;
 
 /**
- * Class to calculate the metric DRISS
- * Description: Degree to which other services depend on a service in terms of calls compared to all calls system-wide
- * Source: S. Schlinger, Benutzung von Laufzeitdaten für die Wartbarkeitsanalyse von Service- und Microservice-basierten Systemen, 2019
+ * Class to calculate the metric DRISS Description: Degree to which other services depend on a
+ * service in terms of calls compared to all calls system-wide Source: S. Schlinger, Benutzung von
+ * Laufzeitdaten für die Wartbarkeitsanalyse von Service- und Microservice-basierten Systemen, 2019
  */
 public class _021_DRISS implements MetricInterface {
 
     /**
      * Calculates the metric from the provided runtime data
+     * 
      * @param graph runtime data to be used
      * @return calculated metric
      */
@@ -61,7 +62,9 @@ public class _021_DRISS implements MetricInterface {
 
         for (Map.Entry<String, Map<String, Double>> nestedResult : nestedResults.entrySet()) {
             for (Map.Entry<String, Double> entry : nestedResult.getValue().entrySet()) {
-                entry.setValue(MathUtils.formatDouble(entry.getValue() / callCounterSystem));
+                if (callCounterSystem != 0) {
+                    entry.setValue(MathUtils.formatDouble(entry.getValue() / callCounterSystem));
+                }
             }
         }
 

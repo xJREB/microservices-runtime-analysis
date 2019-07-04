@@ -8,6 +8,10 @@ import models.Metric;
  */
 public class StringUtils {
 
+    private StringUtils() {
+        throw new IllegalStateException("Utility class");
+    }
+
     /**
      * Converts a map of parameters to an human readable format
      * 
@@ -22,10 +26,10 @@ public class StringUtils {
 
         StringBuilder readableParameters = new StringBuilder();
 
-        for (String currentKey : parameters.keySet()) {
+        for (Map.Entry<String, String> entry : parameters.entrySet()) {
 
-            readableParameters.append(" ").append(currentKey).append("=")
-                    .append(parameters.get(currentKey));
+            readableParameters.append(" ").append(entry.getKey()).append("=")
+                    .append(entry.getValue());
 
         }
 

@@ -11,6 +11,10 @@ public class Logger {
 
     private static boolean debugEnabled = false;
 
+    private Logger() {
+        throw new IllegalStateException("Utility class");
+    }
+
     /**
      * Get the current date formatted as yyyy/MM/dd HH:mm:ss
      * 

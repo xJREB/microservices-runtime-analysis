@@ -147,9 +147,7 @@ public class json implements ExporterInterface {
         json.put("metrics", metricsElement);
 
         // Write result to file
-        try {
-
-            FileWriter file = new FileWriter(params.get("filename").toString());
+        try (FileWriter file = new FileWriter(params.get("filename").toString())) {
             file.write(new GsonBuilder().setPrettyPrinting().create().toJson(json));
             file.flush();
             file.close();
