@@ -6,8 +6,21 @@
     <groupId>de.uni-stuttgart.iste</groupId>
     <artifactId>ms-runtime-analysis</artifactId>
     <version>1.0.0</version>
+    <properties>
+        <sonar.projectName>Microservices Maintainability Runtime Analysis</sonar.projectName>
+        <sonar.projectKey>xJREB_microservices-runtime-analysis</sonar.projectKey>
+        <sonar.organization>xjreb-github</sonar.organization>
+        <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+        <sonar.language>java</sonar.language>
+        <sonar.sources>src/main/java</sonar.sources>
+        <sonar.java.binaries>target/classes</sonar.java.binaries>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+
     <build>
         <plugins>
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -17,6 +30,7 @@
                     <target>8</target>
                 </configuration>
             </plugin>
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
@@ -31,6 +45,7 @@
                     </archive>
                 </configuration>
             </plugin>
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-dependency-plugin</artifactId>
@@ -50,6 +65,7 @@
                     </execution>
                 </executions>
             </plugin>
+
         </plugins>
     </build>
 
