@@ -4,18 +4,18 @@ workflow "New workflow" {
 }
 
 action "Maven Test" {
-  uses = "LucaFeger/action-maven-cli@765e218a50f02a12a7596dc9e7321fc385888a27"
+  uses = "LucaFeger/action-maven-cli"
   args = "clean test"
 }
 
 action "Maven Install" {
-  uses = "LucaFeger/action-maven-cli@765e218a50f02a12a7596dc9e7321fc385888a27"
+  uses = "LucaFeger/action-maven-cli"
   args = "install -DskipTests"
   needs = ["Maven Test"]
 }
 
 action "SonarQube Analysis" {
-  uses = "LucaFeger/action-maven-cli@765e218a50f02a12a7596dc9e7321fc385888a27"
+  uses = "LucaFeger/action-maven-cli"
   needs = ["Maven Install"]
   secrets = ["SONAR_LOGIN"]
   args = "sonar:sonar -Dsonar.login=$SONAR_LOGIN"
