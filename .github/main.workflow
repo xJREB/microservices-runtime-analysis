@@ -17,6 +17,9 @@ action "Maven Install" {
 action "SonarQube Analysis" {
   uses = "xlui/action-maven-cli/jdk8@master"
   needs = ["Maven Install"]
-  secrets = ["SONAR_LOGIN"]
+  secrets = [
+    "SONAR_LOGIN",
+    "GITHUB_TOKEN",
+  ]
   args = "sonar:sonar -Dsonar.login=$SONAR_LOGIN"
 }
