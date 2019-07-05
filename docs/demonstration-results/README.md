@@ -1,0 +1,3 @@
+# Demonstration Results
+
+We design and executed a small case study with a microblogging system based on microservices (<https://github.com/senecajs/ramanujan>). Monitoring data was collected via Zipkin while 6 test participants in 2 groups used the system to solve 2 tasks. In task 1, each group first had 5 minutes to find all functionality offered via the web interface. In task 2, participants had to discuss a topic of their choosing via the messaging functionality of the system. The calculated metric results for the different segments are available in the subfolders of this directory (all combined, per group, per task, etc.).

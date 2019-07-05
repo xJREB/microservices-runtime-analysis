@@ -1,0 +1,537 @@
+{
+  "metrics": [
+    {
+      "interpretation": "Value range: [0,14], lower is better",
+      "name": "Number of Services Involved in the Compound Service",
+      "description": "Number of services involved in the compound service",
+      "abbreviation": "NSIC",
+      "results": {
+        "mine": "8.0",
+        "fanout": "7.0",
+        "entry-cache": "1.0",
+        "index": "1.0",
+        "follow": "6.0",
+        "timeline0": "6.0",
+        "home": "7.0",
+        "timeline1": "6.0",
+        "search": "8.0",
+        "post": "10.0",
+        "reserve": "1.0",
+        "api": "11.0",
+        "timeline-shard": "1.0",
+        "entry-store": "7.0"
+      }
+    },
+    {
+      "result": "2.0",
+      "interpretation": "Value range: [0,91], lower is better",
+      "name": "Services Interdependence in the System",
+      "description": "Count of pairs of services which depend on each other",
+      "abbreviation": "SIY"
+    },
+    {
+      "interpretation": "Value range: [0,13], lower is better",
+      "name": "Absolute Importance of the Service",
+      "description": "Number of services which depend on a service",
+      "abbreviation": "AIS",
+      "results": {
+        "mine": "0.0",
+        "fanout": "1.0",
+        "entry-cache": "3.0",
+        "index": "2.0",
+        "follow": "5.0",
+        "timeline0": "3.0",
+        "home": "0.0",
+        "timeline1": "3.0",
+        "search": "0.0",
+        "post": "1.0",
+        "reserve": "3.0",
+        "api": "0.0",
+        "timeline-shard": "3.0",
+        "entry-store": "2.0"
+      }
+    },
+    {
+      "interpretation": "Value range: [0,13], lower is better",
+      "name": "Absolute Dependence of the Service",
+      "description": "Number of other services a service depends on",
+      "abbreviation": "ADS",
+      "results": {
+        "mine": "2.0",
+        "fanout": "1.0",
+        "entry-cache": "0.0",
+        "index": "0.0",
+        "follow": "5.0",
+        "timeline0": "2.0",
+        "home": "3.0",
+        "timeline1": "2.0",
+        "search": "2.0",
+        "post": "4.0",
+        "reserve": "0.0",
+        "api": "2.0",
+        "timeline-shard": "0.0",
+        "entry-store": "3.0"
+      }
+    },
+    {
+      "interpretation": "Value range: [0,169], lower is better",
+      "name": "Absolute Criticality of the Service",
+      "description": "Product of its absolute importance (AIS) and absolute dependence (ADS)",
+      "abbreviation": "ACS",
+      "results": {
+        "mine": "0.0",
+        "fanout": "1.0",
+        "entry-cache": "0.0",
+        "index": "0.0",
+        "follow": "25.0",
+        "timeline0": "6.0",
+        "home": "0.0",
+        "timeline1": "6.0",
+        "search": "0.0",
+        "post": "4.0",
+        "reserve": "0.0",
+        "api": "0.0",
+        "timeline-shard": "0.0",
+        "entry-store": "6.0"
+      }
+    },
+    {
+      "result": "14.0",
+      "interpretation": "Value range: [0,INF), lower is better",
+      "name": "Number of Services",
+      "description": "Number of services in the system",
+      "abbreviation": "NS"
+    },
+    {
+      "interpretation": "Value range: [0,1), lower is better",
+      "name": "Relative Coupling of Service",
+      "description": "Degree to which a service depends on the other services",
+      "abbreviation": "RCS",
+      "results": {
+        "mine": "0.14",
+        "fanout": "0.07",
+        "entry-cache": "0.0",
+        "index": "0.0",
+        "follow": "0.36",
+        "timeline0": "0.14",
+        "home": "0.21",
+        "timeline1": "0.14",
+        "search": "0.14",
+        "post": "0.29",
+        "reserve": "0.0",
+        "api": "0.14",
+        "timeline-shard": "0.0",
+        "entry-store": "0.21"
+      }
+    },
+    {
+      "interpretation": "Value range: [0,1), lower is better",
+      "name": "Relative Importance of Service",
+      "description": "Degree to which the other services depend on a service",
+      "abbreviation": "RIS",
+      "results": {
+        "mine": "0.0",
+        "fanout": "0.07",
+        "entry-cache": "0.21",
+        "index": "0.14",
+        "follow": "0.36",
+        "timeline0": "0.21",
+        "home": "0.0",
+        "timeline1": "0.21",
+        "search": "0.0",
+        "post": "0.07",
+        "reserve": "0.21",
+        "api": "0.0",
+        "timeline-shard": "0.21",
+        "entry-store": "0.14"
+      }
+    },
+    {
+      "result": "0.14",
+      "interpretation": "Value range: [0,1], lower is better",
+      "name": "Service Coupling Factor",
+      "description": "Indicates the overall coupling in the system, the sum over all single coupling values is set in relation with the maximum couplings that could occur in the system",
+      "abbreviation": "SCF"
+    },
+    {
+      "interpretation": "Value range: [0,INF), lower is better",
+      "name": "Weighted Service Interface Count",
+      "description": "Weighted number of exposed interfaces or operations per service (all weights \u003d 1.0)",
+      "abbreviation": "WSIC",
+      "results": {
+        "mine": "0.0",
+        "fanout": "2.0",
+        "entry-cache": "3.0",
+        "index": "3.0",
+        "follow": "2.0",
+        "timeline0": "2.0",
+        "home": "0.0",
+        "timeline1": "2.0",
+        "search": "0.0",
+        "post": "1.0",
+        "reserve": "2.0",
+        "api": "0.0",
+        "timeline-shard": "4.0",
+        "entry-store": "2.0"
+      }
+    },
+    {
+      "result": "0.71",
+      "interpretation": "Value range: [0,1], lower is better",
+      "name": "Service Composition Pattern",
+      "description": "Fraction of services which are composite",
+      "abbreviation": "SCP"
+    },
+    {
+      "result": "0.61",
+      "interpretation": "Value range: (0,1], very low values should be avoided",
+      "name": "Inverse of Average Number of Used Message",
+      "description": "Ratio between number of services and message types",
+      "abbreviation": "IAUM"
+    },
+    {
+      "interpretation": "Value range: (0,1], higher is better",
+      "name": "Service Interface Usage Cohesion",
+      "description": "Quantifies cohesion of a service based on the number of operations invoked by every client",
+      "abbreviation": "SIUC",
+      "results": {
+        "timeline1": "0.5",
+        "fanout": "1.0",
+        "post": "1.0",
+        "reserve": "1.0",
+        "entry-cache": "0.56",
+        "index": "0.5",
+        "follow": "0.5",
+        "timeline-shard": "0.75",
+        "timeline0": "0.5",
+        "entry-store": "0.5"
+      }
+    },
+    {
+      "interpretation": "Value range: [0,1], higher is better",
+      "name": "Service Interface Data Cohesion",
+      "description": "Quantifies cohesion of a service based on the number of operations sharing the same input parameter types",
+      "abbreviation": "SIDC",
+      "results": {
+        "timeline1": "1.0",
+        "fanout": "0.0",
+        "post": "1.0",
+        "reserve": "1.0",
+        "entry-cache": "0.67",
+        "index": "0.67",
+        "follow": "1.0",
+        "timeline-shard": "1.0",
+        "timeline0": "1.0",
+        "entry-store": "1.0"
+      }
+    },
+    {
+      "interpretation": "Value range: [0,INF), lower is better",
+      "name": "Response for Operation",
+      "description": "Cardinality of the set of other service interfaces that can be executed in response to invocations with all possible parameters",
+      "details": [
+        "follow ([follow:user]): [kind:entry,store:*, timeline:*]",
+        "follow ([follow:list]): [search:*]",
+        "timeline-shard ([shard:1, timeline:*]): [follow:*]",
+        "timeline-shard ([timeline:list]): [follow:*]",
+        "timeline1 ([timeline:list]): [follow:*]",
+        "timeline0 ([timeline:list]): [follow:*]",
+        "entry-store ([kind:entry, store:save]): [info:entry]",
+        "post ([post:entry]): [kind:entry,store:*]",
+        "fanout ([info:entry]): [follow:*]",
+        "fanout ([fanout:entry]): [follow:*]"
+      ],
+      "abbreviation": "RFO",
+      "results": {
+        "timeline1": {
+          "[timeline:insert]": "0.0",
+          "[timeline:list]": "1.0"
+        },
+        "fanout": {
+          "[fanout:entry]": "1.0",
+          "[info:entry]": "1.0"
+        },
+        "post": {
+          "[post:entry]": "1.0"
+        },
+        "reserve": {
+          "[reserve:remove]": "0.0",
+          "[reserve:create]": "0.0"
+        },
+        "entry-cache": {
+          "[kind:entry, store:list]": "0.0",
+          "[kind:entry, store:save]": "0.0",
+          "[cache:true, kind:entry, store:*]": "0.0"
+        },
+        "index": {
+          "[info:entry]": "0.0",
+          "[search:insert]": "0.0",
+          "[search:query]": "0.0"
+        },
+        "follow": {
+          "[follow:user]": "2.0",
+          "[follow:list]": "1.0"
+        },
+        "timeline-shard": {
+          "[timeline:insert]": "0.0",
+          "[shard:0, timeline:*]": "0.0",
+          "[shard:1, timeline:*]": "1.0",
+          "[timeline:list]": "1.0"
+        },
+        "timeline0": {
+          "[timeline:insert]": "0.0",
+          "[timeline:list]": "1.0"
+        },
+        "entry-store": {
+          "[kind:entry, store:save]": "1.0",
+          "[kind:entry, store:list]": "0.0"
+        }
+      }
+    },
+    {
+      "result": "11.0",
+      "interpretation": "Value range: [0,INF), lower is better",
+      "name": "Total Response for Service",
+      "description": "Sum of RFO values for all operations",
+      "abbreviation": "TRS"
+    },
+    {
+      "result": "1.86",
+      "interpretation": "Value range: [0,13], lower is better",
+      "name": "Mean Absolute Importance/Dependence in the System",
+      "description": "Mean number of services which depend on a service / Mean number of services a service depends on",
+      "abbreviation": "MAIDS"
+    },
+    {
+      "result": "3.71",
+      "interpretation": "Value range: [0,26], lower is better",
+      "name": "Mean Absolute Coupling in the System",
+      "description": "Mean number of services which depend on a service or a service depends on",
+      "abbreviation": "MACS"
+    },
+    {
+      "interpretation": "Value range: (0,1], higher is better",
+      "name": "Dynamic Relative Dependence of Service",
+      "description": "Degree to which a service uses other services in terms of calls",
+      "abbreviation": "DRDS",
+      "results": {
+        "mine": {
+          "entry-cache": "0.84",
+          "entry-store": "0.16"
+        },
+        "timeline1": {
+          "reserve": "0.14",
+          "follow": "0.86"
+        },
+        "search": {
+          "index": "0.5",
+          "follow": "0.5"
+        },
+        "fanout": {
+          "follow": "1.0"
+        },
+        "post": {
+          "fanout": "0.29",
+          "entry-cache": "0.29",
+          "index": "0.29",
+          "entry-store": "0.14"
+        },
+        "api": {
+          "post": "0.5",
+          "follow": "0.5"
+        },
+        "follow": {
+          "timeline1": "0.16",
+          "reserve": "0.16",
+          "entry-cache": "0.13",
+          "timeline-shard": "0.47",
+          "timeline0": "0.08"
+        },
+        "timeline0": {
+          "reserve": "0.22",
+          "follow": "0.78"
+        },
+        "entry-store": {
+          "timeline1": "0.13",
+          "timeline-shard": "0.67",
+          "timeline0": "0.2"
+        },
+        "home": {
+          "timeline1": "0.21",
+          "timeline-shard": "0.67",
+          "timeline0": "0.12"
+        }
+      }
+    },
+    {
+      "interpretation": "Value range: (0,1], higher is better",
+      "name": "Dynamic Relative Importance of Service",
+      "description": "Degree to which other services depend on a service in terms of calls",
+      "abbreviation": "DRIS",
+      "results": {
+        "timeline1": {
+          "follow": "0.3",
+          "entry-store": "0.1",
+          "home": "0.6"
+        },
+        "fanout": {
+          "post": "1.0"
+        },
+        "post": {
+          "api": "1.0"
+        },
+        "reserve": {
+          "timeline1": "0.2",
+          "follow": "0.6",
+          "timeline0": "0.2"
+        },
+        "entry-cache": {
+          "mine": "0.58",
+          "post": "0.28",
+          "follow": "0.14"
+        },
+        "index": {
+          "search": "0.78",
+          "post": "0.22"
+        },
+        "follow": {
+          "timeline1": "0.18",
+          "search": "0.55",
+          "fanout": "0.08",
+          "api": "0.08",
+          "timeline0": "0.11"
+        },
+        "timeline-shard": {
+          "follow": "0.27",
+          "entry-store": "0.15",
+          "home": "0.58"
+        },
+        "timeline0": {
+          "follow": "0.23",
+          "entry-store": "0.23",
+          "home": "0.54"
+        },
+        "entry-store": {
+          "mine": "0.44",
+          "post": "0.56"
+        }
+      }
+    },
+    {
+      "interpretation": "Value range: (0,1], lower is better",
+      "name": "Dynamic Relative Dependence of Service in the System",
+      "description": "Degree to which a service uses other services in terms of calls compared to all calls system-wide",
+      "abbreviation": "DRDSS",
+      "results": {
+        "mine": {
+          "entry-cache": "0.08",
+          "entry-store": "0.01"
+        },
+        "timeline1": {
+          "reserve": "0.01",
+          "follow": "0.04"
+        },
+        "search": {
+          "index": "0.13",
+          "follow": "0.13"
+        },
+        "fanout": {
+          "follow": "0.02"
+        },
+        "post": {
+          "fanout": "0.04",
+          "entry-cache": "0.04",
+          "index": "0.04",
+          "entry-store": "0.02"
+        },
+        "api": {
+          "post": "0.02",
+          "follow": "0.02"
+        },
+        "follow": {
+          "timeline1": "0.02",
+          "reserve": "0.02",
+          "entry-cache": "0.02",
+          "timeline-shard": "0.06",
+          "timeline0": "0.01"
+        },
+        "timeline0": {
+          "reserve": "0.01",
+          "follow": "0.03"
+        },
+        "entry-store": {
+          "timeline1": "0.01",
+          "timeline-shard": "0.04",
+          "timeline0": "0.01"
+        },
+        "home": {
+          "timeline1": "0.04",
+          "timeline-shard": "0.14",
+          "timeline0": "0.03"
+        }
+      }
+    },
+    {
+      "interpretation": "Value range: (0,1], lower is better",
+      "name": "Dynamic Relative Importance of Service in the System",
+      "description": "Degree to which other services depend on a service in terms of calls compared to all calls system-wide",
+      "abbreviation": "DRISS",
+      "results": {
+        "timeline1": {
+          "follow": "0.02",
+          "entry-store": "0.01",
+          "home": "0.04"
+        },
+        "fanout": {
+          "post": "0.04"
+        },
+        "post": {
+          "api": "0.02"
+        },
+        "reserve": {
+          "timeline1": "0.01",
+          "follow": "0.02",
+          "timeline0": "0.01"
+        },
+        "entry-cache": {
+          "mine": "0.08",
+          "post": "0.04",
+          "follow": "0.02"
+        },
+        "index": {
+          "search": "0.13",
+          "post": "0.04"
+        },
+        "follow": {
+          "timeline1": "0.04",
+          "search": "0.13",
+          "fanout": "0.02",
+          "api": "0.02",
+          "timeline0": "0.03"
+        },
+        "timeline-shard": {
+          "follow": "0.06",
+          "entry-store": "0.04",
+          "home": "0.14"
+        },
+        "timeline0": {
+          "follow": "0.01",
+          "entry-store": "0.01",
+          "home": "0.03"
+        },
+        "entry-store": {
+          "mine": "0.01",
+          "post": "0.02"
+        }
+      }
+    },
+    {
+      "result": "0.0",
+      "interpretation": "Value range: [0,18348340022], lower is better",
+      "name": "Cyclic Service Dependencies",
+      "description": "Number of cycles in the dependencies",
+      "details": [],
+      "abbreviation": "CSD"
+    }
+  ]
+}

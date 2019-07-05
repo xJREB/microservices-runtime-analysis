@@ -1,0 +1,59 @@
+Metric Name,Abbreviation,Layer,Design Property,Authors,DOI,Applicable to MS,Collectable at Runtime,Selected
+Number of Services Involved in the Compound Service,NSIC,Service,Complexity,Rud et al.,10.1.1.122.6887,yes,yes,yes
+Services Interdependence in the System,SIY,System,Coupling,Rud et al.,10.1.1.122.6887,yes,yes,yes
+Absolute Importance of the Service,AIS,Service,Coupling,Rud et al.,10.1.1.122.6887,yes,yes,yes
+Absolute Dependence of the Service,ADS,Service,Coupling,Rud et al.,10.1.1.122.6887,yes,yes,yes
+Absolute Criticality of the Service,ACS,Service,Coupling,Rud et al.,10.1.1.122.6887,yes,yes,yes
+Response for Operation,RFO,Operation,Complexity,Perepletchikov et al.,10.1109/ASWEC.2007.17,yes,yes,yes
+Total Response for Service,TRS,Service,Complexity,Perepletchikov et al.,10.1109/ASWEC.2007.17,yes,yes,yes
+Service Interface Data Cohesion,SIDC,Service,Cohesion,Perepletchikov et al.,10.1109/QSIC.2007.4385516,yes,yes,yes
+Service Interface Usage Cohesion,SIUC,Service,Cohesion,Perepletchikov et al.,10.1109/QSIC.2007.4385516,yes,yes,yes
+Relative Coupling of Service,RCS,Service,Coupling,Qingqing et al.,10.1109/KAM.2009.90,yes,yes,yes
+Relative Importance of Service,RIS,Service,Coupling,Qingqing et al.,10.1109/KAM.2009.90,yes,yes,yes
+Service Coupling Factor,SCF,System,Coupling,Qingqing et al.,10.1109/KAM.2009.90,yes,yes,yes
+Weighted Service Interface Count,WSIC,Service,Size,Hirzalla et al.,10.1007/978-3-642-01247-1_5,yes,yes,yes
+Service Composition Pattern,SCP,System,Complexity,Hirzalla et al.,10.1007/978-3-642-01247-1_5,yes,yes,yes
+Inverse of Average Number of Used Message,IAUM,System,Cohesion,Shim et al.,10.1109/APSEC.2008.32,yes,yes,yes
+Number of Services,NS,System,Size,Shim et al.,10.1109/APSEC.2008.32,yes,yes,yes
+Mean Absolute Importance/Dependence in the System,MAIDS,System,Coupling,Schlinger,---,yes,yes,yes
+Mean Absolute Coupling in the System,MACS,System,Coupling,Schlinger,---,yes,yes,yes
+Dynamic Relative Dependence of Service,DRDS,Service,Coupling,Schlinger,---,yes,yes,yes
+Dynamic Relative Importance of Service,DRIS,Service,Coupling,Schlinger,---,yes,yes,yes
+Dynamic Relative Dependence of Service in the System,DRDSS,Service,Coupling,Schlinger,---,yes,yes,yes
+Dynamic Relative Importance of Service in the System,DRISS,Service,Coupling,Schlinger,---,yes,yes,yes
+Cyclic Service Dependencies,CSD,System,Complexity,Schlinger,---,yes,yes,yes
+System's CentraliZation,SCZ,System,Centralization,Hofmeister et al.,10.1109/EDOC.2008.13,no,yes,no 
+Weighted Intra-Service Coupling between Elements,WISCE,Element,Coupling,Perepletchikov et al.,10.1109/ASWEC.2007.17,yes,no,no
+Weighted Extra-Service Incoming Coupling of an Element,WESICE,Element,Coupling,Perepletchikov et al.,10.1109/ASWEC.2007.17,yes,no,no
+Weighted Extra-Service Outgoing Coupling of an Element,WESOCE,Element,Coupling,Perepletchikov et al.,10.1109/ASWEC.2007.17,yes,no,no
+Extra-Service Incoming Coupling of Service Interface,ESICSI,Service,Coupling,Perepletchikov et al.,10.1109/ASWEC.2007.17,yes,no,no
+Element to Extra Service Interface Outgoing Coupling,EESIOC,Element,Coupling,Perepletchikov et al.,10.1109/ASWEC.2007.17,yes,no,no
+Service Interface to Intra Element Coupling,SIIEC,Service,Coupling,Perepletchikov et al.,10.1109/ASWEC.2007.17,yes,no,no
+System Partitioning Factor,SPARF,System,Coupling,Perepletchikov et al.,10.1109/ASWEC.2007.17,yes,no,no
+System Purity Factor,SPURF,System,Coupling,Perepletchikov et al.,10.1109/ASWEC.2007.17,yes,no,no
+Service Sequential Usage Cohesion,SSUC,Service,Cohesion,Perepletchikov et al.,10.1109/QSIC.2007.4385516,yes,no,no
+Strict Service Implementation Cohesion,SSIC,Service,Cohesion,Perepletchikov et al.,10.1109/QSIC.2007.4385516,yes,no,no
+Loose Service Implementation Cohesion,LSIC,Service,Cohesion,Perepletchikov et al.,10.1109/QSIC.2007.4385516,yes,no,no
+Total Interface Cohesion of a Service,TICS,Service,Cohesion,Perepletchikov et al.,10.1109/QSIC.2007.4385516,yes,no,no
+Service Granularity,SG,Service,Complexity,Qingqing et al.,10.1109/KAM.2009.90,yes,yes,no
+Service Coupling Factor,SCF,System,Coupling,Hofmeister et al.,10.1109/EDOC.2008.13,yes,yes,no
+System's Service Coupling,SSC,System,Coupling,Hofmeister et al.,10.1109/EDOC.2008.13,yes,yes,no
+Extent of Aggregation,EOA,System,Complexity,Hofmeister et al.,10.1109/EDOC.2008.13,yes,yes,no
+Density of Aggregation,DOA,System,Complexity,Hofmeister et al.,10.1109/EDOC.2008.13,yes,yes,no
+Aggregator CentraliZation,ACZ,System,Centralization,Hofmeister et al.,10.1109/EDOC.2008.13,no,yes,no
+Stateless Services,SS,System,Complexity,Hirzalla et al.,10.1007/978-3-642-01247-1_5,yes,no,no
+Service Support for Transactions,SST,System,Complexity,Hirzalla et al.,10.1007/978-3-642-01247-1_5,yes,no,no
+Service Realization Pattern,SRP,System,Complexity,Hirzalla et al.,10.1007/978-3-642-01247-1_5,yes,no,no
+Number of Services,NOS,System,Size,Hirzalla et al.,10.1007/978-3-642-01247-1_5,yes,yes,no
+Service Access Method,SAM,System,Complexity,Hirzalla et al.,10.1007/978-3-642-01247-1_5,yes,no,no
+Dynamic vs. Static Service Selection,DSSS,System,Complexity,Hirzalla et al.,10.1007/978-3-642-01247-1_5,yes,no,no
+Number of Versions per Service,NOVS,System,Complexity,Hirzalla et al.,10.1007/978-3-642-01247-1_5,yes,no,no
+Average Number of Directly Connected Services,ADCS,System,Coupling,Shim et al.,10.1109/APSEC.2008.32,yes,no,no
+Number of Operations,NO,System,Size,Shim et al.,10.1109/APSEC.2008.32,yes,yes,no
+AVG # of Operations to AVG # of Messages,AOMR,System,Size,Shim et al.,10.1109/APSEC.2008.32,yes,yes,no
+Coarse-Grained Parameter Ratio,CPR,System,Size,Shim et al.,10.1109/APSEC.2008.32,yes,no,no
+CoHesion at Message level,CHM,System,Cohesion,Jin et al.,10.1109/ICWS.2018.00034,yes,no,no
+CoHesion at Domain level,CHD,System,Cohesion,Jin et al.,10.1109/ICWS.2018.00034,yes,no,no
+InterFace Number,IFN,System,Size,Jin et al.,10.1109/ICWS.2018.00034,yes,yes,no
+OPeration Number,OPN,System,Size,Jin et al.,10.1109/ICWS.2018.00034,yes,yes,no
+InteRaction Number,IRN,Service,Size,Jin et al.,10.1109/ICWS.2018.00034,yes,yes,no

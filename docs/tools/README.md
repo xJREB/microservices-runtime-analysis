@@ -1,0 +1,19 @@
+# Tracing Tools for Runtime Analysis
+
+We collected and analyzed 13 different approaches and tools for the collection of runtime data in distributed systems. In the end, we decided to implement a Zipkin integrator. The tools are listed in the table below and in [docs/tools/tracing-tools.csv](tracing-tools.csv).
+
+| Tool Name                                      | Integration                                                           | Authors           | Source                                                                       | Selected |
+| ---------------------------------------------- | --------------------------------------------------------------------- | ----------------- | ---------------------------------------------------------------------------- | -------: |
+| Zipkin                                         | source code changes necessary; libraries for many languages available | Zipkin Team       | https://zipkin.io                                                            |      yes |
+| Jaeger                                         | source code changes necessary; libraries for many languages available | Jaeger Team       | https://www.jaegertracing.io                                                 |       no |
+| Google Dapper                                  | source code changes necessary; no concrete implementation available   | Sigelman et al.   | https://ai.google/research/pubs/pub36356                                     |       no |
+| MicroART                                       | no source code changes; manual effort necessary                       | Granchelli et al. | https://ieeexplore.ieee.org/document/7958455                                 |       no |
+| Microservice Architecture Analysis Tool (MAAT) | source code changes necessary; libraries for many languages available | Engel et al.      | https://link.springer.com/chapter/10.1007%2F978-3-319-92901-9_8              |       no |
+| Data Collection Library                        | source code changes necessary; implementation available               | Mayer et al.      | https://ieeexplore.ieee.org/document/8359145                                 |       no |
+| Dynatrace                                      | monitoring client; no source code changes                             | Dynatrace LLC.    | https://www.dynatrace.com                                                    |       no |
+| New Relic                                      | monitoring client; no source code changes                             | New Relic; Inc.   | https://newrelic.com                                                         |       no |
+| Pivot Tracing                                  | focused on HDFS; no source code changes                               | Mace et al.       | https://www.usenix.org/conference/atc16/technical-sessions/presentation/mace |       no |
+| Prometheus                                     | source code changes necessary; libraries for many languages available | Prometheus Team   | https://prometheus.io                                                        |       no |
+| Apache HTrace                                  | source code changes necessary; some libraries available               | HTrace Team       | http://incubator.apache.org/projects/htrace.html                             |       no |
+| Kieker                                         | several possibilities (source code; middleware; ...)                  | Bielefeld et al.  | http://kieker-monitoring.net                                                 |       no |
+| Tcpdump                                        | passive network monitoring; no source code changes necessary          | Tcpdump Team      | https://www.tcpdump.org                                                      |       no |
