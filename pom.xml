@@ -14,22 +14,15 @@
         <sonar.language>java</sonar.language>
         <sonar.sources>src/main/java</sonar.sources>
         <sonar.java.binaries>target/classes</sonar.java.binaries>
+        <sonar.tests>src/test/java</sonar.tests>
+        <sonar.junit.reportPaths>target/surefire-reports</sonar.junit.reportPaths>
+        <sonar.coverage.jacoco.xmlReportPaths>target/site/jacoco</sonar.coverage.jacoco.xmlReportPaths>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
 
     <build>
         <plugins>
-
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version>
-                <configuration>
-                    <source>8</source>
-                    <target>8</target>
-                </configuration>
-            </plugin>
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -62,6 +55,26 @@
                                 ${project.build.directory}/dependency-jars/
                             </outputDirectory>
                         </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>org.jacoco</groupId>
+                <artifactId>jacoco-maven-plugin</artifactId>
+                <version>0.8.4</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>prepare-agent</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>report</id>
+                        <phase>prepare-package</phase>
+                        <goals>
+                            <goal>report</goal>
+                        </goals>
                     </execution>
                 </executions>
             </plugin>

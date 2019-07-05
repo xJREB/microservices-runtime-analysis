@@ -1,6 +1,5 @@
 package models;
 
-import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -8,15 +7,15 @@ import java.util.Map;
  */
 public class Metric {
 
-    public final static int RESULT_ERROR = 0;
-    public final static int RESULT_OK_SINGLE_RESULT = 1;
-    public final static int RESULT_OK_MULTIPLE_RESULTS = 2;
-    public final static int RESULT_OK_NESTED_RESULTS = 3;
-    public final static int RESULT_NOT_PROCESSED_YET = 4;
+    public static final int RESULT_ERROR = 0;
+    public static final int RESULT_OK_SINGLE_RESULT = 1;
+    public static final int RESULT_OK_MULTIPLE_RESULTS = 2;
+    public static final int RESULT_OK_NESTED_RESULTS = 3;
+    public static final int RESULT_NOT_PROCESSED_YET = 4;
 
-    public final static int RESULT_TYPE_PERCENT = 0;
-    public final static int RESULT_TYPE_INT = 1;
-    public final static int RESULT_TYPE_DOUBLE = 2;
+    public static final int RESULT_TYPE_PERCENT = 0;
+    public static final int RESULT_TYPE_INT = 1;
+    public static final int RESULT_TYPE_DOUBLE = 2;
 
     private String longName;
     private String abbreviation;
@@ -26,8 +25,8 @@ public class Metric {
     private int resultType;
     private String resultStatusMessage;
     private Double singleResult;
-    private HashMap<String, Double> multipleResults;
-    private HashMap<String, Map<String, Double>> nestedResults;
+    private Map<String, Double> multipleResults;
+    private Map<String, Map<String, Double>> nestedResults;
     private String[] resultDetails = null;
 
     /**
@@ -197,7 +196,7 @@ public class Metric {
      * 
      * @return result values of the metric
      */
-    public HashMap<String, Double> getMultipleResults() {
+    public Map<String, Double> getMultipleResults() {
         return multipleResults;
     }
 
@@ -206,7 +205,7 @@ public class Metric {
      * 
      * @param multipleResults result values of the metric
      */
-    public void setMultipleResults(HashMap<String, Double> multipleResults) {
+    public void setMultipleResults(Map<String, Double> multipleResults) {
         this.multipleResults = multipleResults;
     }
 
@@ -215,7 +214,7 @@ public class Metric {
      * 
      * @return nested result values of the metric
      */
-    public HashMap<String, Map<String, Double>> getNestedResults() {
+    public Map<String, Map<String, Double>> getNestedResults() {
         return nestedResults;
     }
 
@@ -224,7 +223,7 @@ public class Metric {
      * 
      * @param nestedResults nested result values of the metric
      */
-    public void setNestedResults(HashMap<String, Map<String, Double>> nestedResults) {
+    public void setNestedResults(Map<String, Map<String, Double>> nestedResults) {
         this.nestedResults = nestedResults;
     }
 

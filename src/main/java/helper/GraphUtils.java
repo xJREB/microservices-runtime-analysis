@@ -3,6 +3,7 @@ package helper;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import org.jgrapht.alg.cycle.TarjanSimpleCycles;
 import org.jgrapht.graph.DefaultDirectedGraph;
 import org.jgrapht.graph.DefaultEdge;
@@ -84,8 +85,8 @@ public class GraphUtils {
      * @param dependencies already found children
      * @return vertex and list of all children
      */
-    public static HashSet<Service> getDependencies(DefaultDirectedGraph<Service, DefaultEdge> graph,
-            Service service, HashSet<Service> dependencies) {
+    public static Set<Service> getDependencies(DefaultDirectedGraph<Service, DefaultEdge> graph,
+            Service service, Set<Service> dependencies) {
 
         dependencies.add(service);
 

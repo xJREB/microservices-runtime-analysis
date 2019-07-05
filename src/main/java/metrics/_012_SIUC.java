@@ -50,7 +50,7 @@ public class _012_SIUC implements MetricInterface {
 
             }
 
-            if ((callers.size() > 0) && (numberOfOperations > 0)) {
+            if ((!callers.isEmpty()) && (numberOfOperations > 0)) {
                 results.put(service.getName(), MathUtils.formatDouble((double) numberOfCalls
                         / ((double) callers.size() * (double) numberOfOperations)));
             }

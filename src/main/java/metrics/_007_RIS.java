@@ -28,7 +28,7 @@ public class _007_RIS implements MetricInterface {
                 "Value range: [0,1), lower is better", Metric.RESULT_TYPE_PERCENT);
         HashMap<String, Double> results = new HashMap<>();
 
-        if (graph.vertexSet().size() == 0) {
+        if (graph.vertexSet().isEmpty()) {
             metric.setResultStatusMessage("No services found, can't calculate metric");
             metric.setResultStatus(Metric.RESULT_ERROR);
         } else {

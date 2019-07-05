@@ -26,7 +26,7 @@ public class _008_SCF implements MetricInterface {
                 "Indicates the overall coupling in the system, the sum over all single coupling values is set in relation with the maximum couplings that could occur in the system",
                 "Value range: [0,1], lower is better", Metric.RESULT_TYPE_DOUBLE);
 
-        if (graph.vertexSet().size() == 0) {
+        if (graph.vertexSet().isEmpty()) {
             metric.setResultStatusMessage("No services found, can't calculate metric");
             metric.setResultStatus(Metric.RESULT_ERROR);
         } else {

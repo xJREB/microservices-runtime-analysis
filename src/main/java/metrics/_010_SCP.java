@@ -26,7 +26,7 @@ public class _010_SCP implements MetricInterface {
                 "Fraction of services which are composite", "Value range: [0,1], lower is better",
                 Metric.RESULT_TYPE_PERCENT);
 
-        if (graph.vertexSet().size() == 0) {
+        if (graph.vertexSet().isEmpty()) {
             metric.setResultStatusMessage("No services found, can't calculate metric");
             metric.setResultStatus(Metric.RESULT_ERROR);
         } else {
@@ -34,7 +34,7 @@ public class _010_SCP implements MetricInterface {
             double value = 0;
 
             for (Service service : graph.vertexSet()) {
-                if (graph.outgoingEdgesOf(service).size() > 0) {
+                if (!graph.outgoingEdgesOf(service).isEmpty()) {
                     value++;
                 }
             }

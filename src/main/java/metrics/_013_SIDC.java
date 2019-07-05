@@ -50,7 +50,7 @@ public class _013_SIDC implements MetricInterface {
                     parameterNames.add(parameterParts[0]);
                 }
 
-                if (parameterNames.size() > 0) {
+                if (!parameterNames.isEmpty()) {
 
                     String[] sortedParameterNames = parameterNames.toArray(new String[0]);
                     Arrays.sort(sortedParameterNames);

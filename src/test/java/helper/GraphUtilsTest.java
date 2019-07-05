@@ -3,6 +3,7 @@ package helper;
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 import java.util.HashSet;
+import java.util.Set;
 import org.jgrapht.graph.DefaultDirectedGraph;
 import org.jgrapht.graph.DefaultEdge;
 import org.junit.Test;
@@ -108,8 +109,8 @@ public class GraphUtilsTest {
         graph.addVertex(d);
 
         // Check zero dependencies
-        HashSet<Service> result = GraphUtils.getDependencies(graph, a, new HashSet<>());
-        HashSet<Service> expected = new HashSet<>();
+        Set<Service> result = GraphUtils.getDependencies(graph, a, new HashSet<>());
+        Set<Service> expected = new HashSet<>();
 
         expected.add(a);
 
