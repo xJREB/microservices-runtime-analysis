@@ -1,6 +1,6 @@
 # Runtime Calculator for Service-Based Maintainability Metrics
 
-[![Actions Status](https://action-badges.now.sh/xJREB/microservices-runtime-analysis)](https://github.com/xJREB/microservices-runtime-analysis/actions?fullscreen=true)
+![Actions Status](https://action-badges.now.sh/xJREB/microservices-runtime-analysis)
 [![SonarQube Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=xJREB_microservices-runtime-analysis&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=xJREB_microservices-runtime-analysis)
 [![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=xJREB_microservices-runtime-analysis&metric=ncloc)](https://sonarcloud.io/dashboard?id=xJREB_microservices-runtime-analysis)
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=xJREB_microservices-runtime-analysis&metric=coverage)](https://sonarcloud.io/dashboard?id=xJREB_microservices-runtime-analysis)
