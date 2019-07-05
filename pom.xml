@@ -16,7 +16,7 @@
         <sonar.java.binaries>target/classes</sonar.java.binaries>
         <sonar.tests>src/test/java</sonar.tests>
         <sonar.junit.reportPaths>target/surefire-reports</sonar.junit.reportPaths>
-        <sonar.coverage.jacoco.xmlReportPaths>target/site/jacoco</sonar.coverage.jacoco.xmlReportPaths>
+        <sonar.coverage.jacoco.xmlReportPaths>target/site/jacoco/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
@@ -32,7 +32,7 @@
                     <archive>
                         <manifest>
                             <addClasspath>true</addClasspath>
-                            <mainClass>Main</mainClass>
+                            <mainClass>de.uni_stuttgart.iste.ms_runtime_analysis.Main</mainClass>
                             <classpathPrefix>dependency-jars/</classpathPrefix>
                         </manifest>
                     </archive>

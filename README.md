@@ -1,7 +1,9 @@
-[![Actions Status](https://wdp9fww0r9.execute-api.us-west-2.amazonaws.com/production/badge/xjreb/microservices-runtime-analysis)](https://wdp9fww0r9.execute-api.us-west-2.amazonaws.com/production/results/xjreb/microservices-runtime-analysis)
-[![Sonarcloud Dashboard](https://sonarcloud.io/api/project_badges/measure?project=xJREB_microservices-runtime-analysis&metric=alert_status)](https://sonarcloud.io/dashboard?id=xJREB_microservices-runtime-analysis)
-
 # Runtime Calculator for Service-Based Maintainability Metrics
+
+[![Actions Status](https://action-badges.now.sh/xJREB/microservices-runtime-analysis)](https://github.com/xJREB/microservices-runtime-analysis/actions?fullscreen=true)
+[![SonarQube Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=xJREB_microservices-runtime-analysis&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=xJREB_microservices-runtime-analysis)
+[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=xJREB_microservices-runtime-analysis&metric=ncloc)](https://sonarcloud.io/dashboard?id=xJREB_microservices-runtime-analysis)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=xJREB_microservices-runtime-analysis&metric=coverage)](https://sonarcloud.io/dashboard?id=xJREB_microservices-runtime-analysis)
 
 This Java CLI application uses operational data produced by service- or microservice-based systems for the calculation of service-based maintainability metrics. It collects runtime data by using integrators (e.g. via OpenTracing), calculates maintainability metrics, and uses exporters to output the results (e.g. as a JSON file).
 
@@ -57,43 +59,43 @@ The framework is developed to be easily extensible. New integrators, metrics and
 
 ### Integrators
 
-- [zipkin](src/main/java/integrators/zipkin.java)
+- [zipkin](src/main/java/de/uni_stuttgart/iste/ms_runtime_analysis/integrators/zipkin.java)
 
 ### Metrics
 
 Each metric class includes a short description and a publication reference as a comment at the top.
 
-- [Number of Services Involved in the Compound Service (NSIC)](src/main/java/metrics/_000_NSIC.java)
-- [Services Interdependence in the System (SIY)](src/main/java/metrics/_001_SIY.java)
-- [Absolute Importance of the Service (AIS)](src/main/java/metrics/_002_AIS.java)
-- [Absolute Dependence of the Service (ADS)](src/main/java/metrics/_003_ADS.java)
-- [Absolute Criticality of the Service (ACS)](src/main/java/metrics/_004_ACS.java)
-- [Number of Services (NS)](src/main/java/metrics/_005_NS.java)
-- [Relative Coupling of Service (RCS)](src/main/java/metrics/_006_RCS.java)
-- [Relative Importance of Service (RIS)](src/main/java/metrics/_007_RIS.java)
-- [Service Coupling Factor (SCF)](src/main/java/metrics/_008_SCF.java)
-- [Weighted Service Interface Count (WSIC)](src/main/java/metrics/_009_WSIC.java)
-- [Service Composition Pattern (SCP)](src/main/java/metrics/_010_SCP.java)
-- [Inverse of Average Number of Used Message (IAUM)](src/main/java/metrics/_011_IAUM.java)
-- [Service Interface Usage Cohesion (SIUC)](src/main/java/metrics/_012_SIUC.java)
-- [Service Interface Data Cohesion (SIDC)](src/main/java/metrics/_013_SIDC.java)
-- [Response for Operation (RFO)](src/main/java/metrics/_014_RFO.java)
-- [Total Response for Service (TRS)](src/main/java/metrics/_015_TRS.java)
-- [Mean Absolute Importance/Dependence in the System (MAIDS)](src/main/java/metrics/_016_MAIDS.java)
-- [Mean Absolute Coupling in the System (MACS)](src/main/java/metrics/_017_MACS.java)
-- [Dynamic Relative Dependence of Service (DRDS)](src/main/java/metrics/_018_DRDS.java)
-- [Dynamic Relative Importance of Service (DRIS)](src/main/java/metrics/_019_DRIS.java)
-- [Dynamic Relative Dependence of Service in the System (DRDSS)](src/main/java/metrics/_020_DRDSS.java)
-- [Dynamic Relative Importance of Service in the System (DRISS)](src/main/java/metrics/_021_DRISS.java)
-- [Cyclic Service Dependencies (CSD)](src/main/java/metrics/_022_CSD.java)
+- [Number of Services Involved in the Compound Service (NSIC)](src/main/java/de/uni_stuttgart/iste/ms_runtime_analysis/metrics/_000_NSIC.java)
+- [Services Interdependence in the System (SIY)](src/main/java/de/uni_stuttgart/iste/ms_runtime_analysis/metrics/_001_SIY.java)
+- [Absolute Importance of the Service (AIS)](src/main/java/de/uni_stuttgart/iste/ms_runtime_analysis/metrics/_002_AIS.java)
+- [Absolute Dependence of the Service (ADS)](src/main/java/de/uni_stuttgart/iste/ms_runtime_analysis/metrics/_003_ADS.java)
+- [Absolute Criticality of the Service (ACS)](src/main/java/de/uni_stuttgart/iste/ms_runtime_analysis/metrics/_004_ACS.java)
+- [Number of Services (NS)](src/main/java/de/uni_stuttgart/iste/ms_runtime_analysis/metrics/_005_NS.java)
+- [Relative Coupling of Service (RCS)](src/main/java/de/uni_stuttgart/iste/ms_runtime_analysis/metrics/_006_RCS.java)
+- [Relative Importance of Service (RIS)](src/main/java/de/uni_stuttgart/iste/ms_runtime_analysis/metrics/_007_RIS.java)
+- [Service Coupling Factor (SCF)](src/main/java/de/uni_stuttgart/iste/ms_runtime_analysis/metrics/_008_SCF.java)
+- [Weighted Service Interface Count (WSIC)](src/main/java/de/uni_stuttgart/iste/ms_runtime_analysis/metrics/_009_WSIC.java)
+- [Service Composition Pattern (SCP)](src/main/java/de/uni_stuttgart/iste/ms_runtime_analysis/metrics/_010_SCP.java)
+- [Inverse of Average Number of Used Message (IAUM)](src/main/java/de/uni_stuttgart/iste/ms_runtime_analysis/metrics/_011_IAUM.java)
+- [Service Interface Usage Cohesion (SIUC)](src/main/java/de/uni_stuttgart/iste/ms_runtime_analysis/metrics/_012_SIUC.java)
+- [Service Interface Data Cohesion (SIDC)](src/main/java/de/uni_stuttgart/iste/ms_runtime_analysis/metrics/_013_SIDC.java)
+- [Response for Operation (RFO)](src/main/java/de/uni_stuttgart/iste/ms_runtime_analysis/metrics/_014_RFO.java)
+- [Total Response for Service (TRS)](src/main/java/de/uni_stuttgart/iste/ms_runtime_analysis/metrics/_015_TRS.java)
+- [Mean Absolute Importance/Dependence in the System (MAIDS)](src/main/java/de/uni_stuttgart/iste/ms_runtime_analysis/metrics/_016_MAIDS.java)
+- [Mean Absolute Coupling in the System (MACS)](src/main/java/de/uni_stuttgart/iste/ms_runtime_analysis/metrics/_017_MACS.java)
+- [Dynamic Relative Dependence of Service (DRDS)](src/main/java/de/uni_stuttgart/iste/ms_runtime_analysis/metrics/_018_DRDS.java)
+- [Dynamic Relative Importance of Service (DRIS)](src/main/java/de/uni_stuttgart/iste/ms_runtime_analysis/metrics/_019_DRIS.java)
+- [Dynamic Relative Dependence of Service in the System (DRDSS)](src/main/java/de/uni_stuttgart/iste/ms_runtime_analysis/metrics/_020_DRDSS.java)
+- [Dynamic Relative Importance of Service in the System (DRISS)](src/main/java/de/uni_stuttgart/iste/ms_runtime_analysis/metrics/_021_DRISS.java)
+- [Cyclic Service Dependencies (CSD)](src/main/java/de/uni_stuttgart/iste/ms_runtime_analysis/metrics/_022_CSD.java)
 
 ### Exporters
 
-- [xml](src/main/java/exporters/xml.java)
-- [json](src/main/java/exporters/json.java)
-- [csv](src/main/java/exporters/csv.java)
-- [human_readable](src/main/java/exporters/human_readable.java)
-- [markdown](src/main/java/exporters/markdown.java)
+- [xml](src/main/java/de/uni_stuttgart/iste/ms_runtime_analysis/exporters/xml.java)
+- [json](src/main/java/de/uni_stuttgart/iste/ms_runtime_analysis/exporters/json.java)
+- [csv](src/main/java/de/uni_stuttgart/iste/ms_runtime_analysis/exporters/csv.java)
+- [human_readable](src/main/java/de/uni_stuttgart/iste/ms_runtime_analysis/exporters/human_readable.java)
+- [markdown](src/main/java/de/uni_stuttgart/iste/ms_runtime_analysis/exporters/markdown.java)
 
 ## Using the Zipkin Integrator
 
@@ -142,7 +144,7 @@ The integrators are run sequentially and change/extend the previous graph.
 
 To create another integrator, follow these steps:
 
-- Create a new Java class in `src/main/java/integrators/`
+- Create a new Java class in the `integrators` package.
 - The class has to implement the `IntegratorInterface` interface:
 
 ```java
@@ -174,7 +176,7 @@ To use the newly created integrator, specify its class name as the value for the
 
 To add another metric to the framework, follow these steps:
 
-- Create a new Java class in `src/main/java/metrics/`
+- Create a new Java class in the `metrics` package.
 - The class has to implement the `MetricInterface` interface:
 
 ```java
@@ -219,7 +221,7 @@ The exporters output the calculated metrics to an arbitrary target in an arbitra
 
 To create another exporter follow these steps:
 
-- Create a new Java class in `src/main/java/exporters/`
+- Create a new Java class in the `exporters` package.
 - The class has to implement the `ExporterInterface` interface:
 
 ```java
