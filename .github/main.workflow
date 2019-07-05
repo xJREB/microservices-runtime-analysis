@@ -1,6 +1,6 @@
-workflow "Test, Build, Sonar" {
-  on = "push"
+workflow "Build and Test" {
   resolves = ["SonarQube Analysis"]
+  on = "push"
 }
 
 action "Maven Test" {
