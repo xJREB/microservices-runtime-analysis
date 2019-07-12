@@ -63,7 +63,7 @@ We collected a set of 58 service-based maintainability metrics proposed in scien
 | OPeration Number                                       | OPN          | System    | Size            | Jin et al.            |    [3] |              yes |                    yes |       no |
 | InteRaction Number                                     | IRN          | Service   | Size            | Jin et al.            |    [3] |              yes |                    yes |       no |
 
-### References
+## References
 
 1. Hirzalla, M., Cleland-Huang, J., Arsanjani, A.: A Metrics Suite for Evaluating Flexibility and Complexity in Service Oriented Architectures. In: Krämer, B.J., Lin, K.-J., and Narasimhan, P. (eds.) Service-Oriented Computing -- ICSOC 2008 Workshops: ICSOC 2008 International Workshops, Sydney, Australia, December 1st, 2008, Revised Selected Papers. pp. 41–52. Springer Berlin Heidelberg, Berlin, Heidelberg (2009).
 2. Hofmeister, H., Wirtz, G.: Supporting Service-Oriented Design with Metrics. In: 2008 12th International IEEE Enterprise Distributed Object Computing Conference. pp. 191–200. IEEE (2008).
@@ -73,3 +73,63 @@ We collected a set of 58 service-based maintainability metrics proposed in scien
 6. Qingqing, Z., Xinke, L.: Complexity Metrics for Service-Oriented Systems. In: 2009 Second International Symposium on Knowledge Acquisition and Modeling. pp. 375–378. IEEE (2009).
 7. Rud, D., Schmietendorf, A., Dumke, R.R.: Product Metrics for Service-Oriented Infrastructures. In: IWSM/MetriKon (2006).
 8. Shim, B., Choue, S., Kim, S., Park, S.: A Design Quality Model for Service-Oriented Architecture. In: 2008 15th Asia-Pacific Software Engineering Conference. pp. 403–410. IEEE (2008).
+
+## Newly Designed Metrics
+
+The 7 metrics adapted by us are described in this section. Metric formalization is based on the set of services $S$ that contains individual services, e.g. $s_1, s_2 \in S$. The function $ID(s_i)$ returns the number of incoming dependencies for $s_i$, i.e. the number of other services that depend on $s_i$. Likewise, $OD(s_i)$ returns the number of outgoing dependencies of $s_i$. The set $D(S)$ contains all dependencies between services in $S$. The function $cycles(D)$ returns the set of cyclic dependencies within $D$. Lastly, the function $calls(s_1, s_2, t)$ returns the number of calls from $s_1$ to $s_2$ within timeframe $t$. All ingoing calls to $s_1$ within $t$ are indicated by $calls(*, s_1, t)$ while all outgoing calls from $s_1$ within $t$ are indicated by $calls(s_1, *, t)$. The total number of calls in $S$ during $t$ is indicated by $calls(*, *, t)$.
+
+### Mean Absolute Importance/Dependence in the System (MAIDS)
+
+This metric is a system-wide variant of AIS/ADS [7]. It returns the mean number of service dependencies a service in $S$ has. At the system level, the mean number of incoming and outgoing dependencies is identical. The value range of MAIDS is $[0, |S| - 1]$.
+
+$
+MAIDS(S) = \frac{ \sum\limits_{s \in S} ID(s) }{ |S| } = \frac{ \sum\limits_{s \in S} OD(s) }{ |S| }
+$
+
+### Mean Absolute Coupling in the System (MACS)
+
+This metric is a system-wide variant of ACS [7]. It analyzes the degree of coupling in $S$ by calculating the mean number of dependencies from both side, incoming as well as outgoing. The value range of MACS is $[0, 2 * (|S| - 1)]$.
+
+$
+MACS(S) = \frac{ \sum\limits_{s \in S} \Big( ID(s) + OD(s) \Big) }{ |S| } = 2 * MAIDS(S)
+$
+
+### Dynamic Relative Dependence of Service (DRDS)
+
+This is a dynamic variant of the metric RCS [6]. It describes how strongly $s_1$ is coupled to $s_2$ based on the percentage of outgoing calls from $s_1$ that went to $s_2$ within timeframe $t$. The value range of DRDS is $[0, 1]$.
+
+$
+DRDS(s_1, s_2, t) = \frac{ calls(s_1, s_2, t) }{ calls(s_1, *, t) }
+$
+
+### Dynamic Relative Importance of Service (DRIS)
+
+This metric is a dynamic variant of RIS [6] and therefore the complement to DRDS. It describes how strongly $s_1$ is coupled to $s_2$ based on the percentage of incoming calls to $s_1$ that originated from $s_2$ within timeframe $t$. The value range of DRIS is $[0, 1]$.
+
+$
+DRIS(s_1, s_2, t) = \frac{ calls(s_2, s_1, t) }{ calls(*, s_1, t) }
+$
+
+### Dynamic Relative Dependence of Service in the System (DRDSS)
+
+This metric is a system-wide variant of DRDS. It describes how strongly $s_1$ is coupled to $s_2$ based on the percentage calls from $s_1$ to $s_2$ take in the complete system $S$ within timeframe $t$. The value range of DRDSS is $[0, 1]$.
+
+$
+DRDSS(s_1, s_2, t) = \frac{ calls(s_1, s_2, t) }{ calls(*, *, t) }
+$
+
+### Dynamic Relative Importance of Service in the System (DRISS)
+
+This metric is a system-wide variant of DRIS and therefore the complement to DRDSS. It describes how strongly $s_1$ is coupled to $s_2$ based on the percentage calls from $s_2$ to $s_1$ take in the complete system within timeframe $t$. The value range of DRISS is $[0, 1]$.
+
+$
+DRISS(s_1, s_2, t) = \frac{ calls(s_2, s_1, t) }{ calls(*, *, t) }
+$
+
+### Cyclic Service Dependencies (CSD)
+
+This system-wide metric returns the number of cyclic dependency chains within $S$. While the metric SIY [7] only returns the number of bi-directional dependencies between two services, CSD includes cycles involving more than two services. The value range for CSD is $[0, \infty]$.
+
+$
+CSD(S) = | cycles(D(S)) |
+$
