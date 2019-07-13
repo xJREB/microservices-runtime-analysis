@@ -47,47 +47,6 @@ public class zipkin implements IntegratorInterface {
         long startDate = configuration.getStartDate();
         long lookback = endDate - startDate;
 
-        /*
-         * // Fetch the dependency graph String url = params.get("url") +
-         * "/api/v2/dependencies?endTs=" + endDate + "&lookback=" + lookback; String fullJSON; try {
-         * fullJSON = NetworkUtils.getHTTP(url); } catch (IOException e) {
-         * Logger.err("         Error: Could not connect to zipkin at " + url +
-         * ", continuing with next integrator"); return graph; }
-         * 
-         * // Parse dependency graph Map<String, Service> serviceMap = new HashMap<String,
-         * Service>();
-         * 
-         * JSONParser parser = new JSONParser();
-         * 
-         * try {
-         * 
-         * JSONArray jsonEntries = (JSONArray) parser.parse(fullJSON);
-         * 
-         * for (Object currentJSONEntry : jsonEntries) {
-         * 
-         * JSONObject jsonEntry = (JSONObject) currentJSONEntry;
-         * 
-         * String parent = jsonEntry.get("parent").toString(); String child =
-         * jsonEntry.get("child").toString();
-         * 
-         * if(parent.equals(child)) { continue; }
-         * 
-         * // Create vertex for caller if(!serviceMap.containsKey(parent)) { Service vertex = new
-         * Service(parent); serviceMap.put(parent, vertex); graph.addVertex(vertex); }
-         * 
-         * // Create vertex for callee if(!serviceMap.containsKey(child)) { Service vertex = new
-         * Service(child); serviceMap.put(child, vertex); graph.addVertex(vertex); }
-         * 
-         * // Create edge between services if(!graph.containsEdge(serviceMap.get(parent),
-         * serviceMap.get(child))) { graph.addEdge(serviceMap.get(parent), serviceMap.get(child)); }
-         * 
-         * }
-         * 
-         * } catch (ParseException e) { Logger.
-         * err("         Error: Cannot parse dependency graph, continuing with next integrator: " +
-         * e.getMessage()); return graph; }
-         */
-
         // Fetch the services list
         String url = params.get("url") + "/api/v2/services";
         String fullJSON;
