@@ -1,6 +1,6 @@
 # Service-Based Maintainability Metrics
 
-We collected a set of 58 service-based maintainability metrics proposed in scientific literature. From these, we chose 16 candidates and adapted an additional 7 metrics for not covered parts (Authors = Schlinger). All in all, we then implemented 23 metrics for the prototype. The metrics are listed in the table below and in [docs/metrics/maintainability-metrics.csv](maintainability-metrics.csv).
+We collected a set of 58 service-based maintainability metrics proposed in scientific literature. From these, we chose 16 candidates and adapted an additional 7 metrics for not covered parts (Authors = Schlinger et al.). All in all, we then implemented 23 metrics for the prototype. The metrics are listed in the table below and in [docs/metrics/maintainability-metrics.csv](maintainability-metrics.csv).
 
 | Metric Name                                            | Abbreviation | Layer     | Design Property | Authors               | Source | Applicable to MS | Collectable at Runtime | Selected |
 | ------------------------------------------------------ | ------------ | --------- | --------------- | --------------------- | -----: | ---------------: | ---------------------: | -------: |
@@ -20,13 +20,13 @@ We collected a set of 58 service-based maintainability metrics proposed in scien
 | Service Composition Pattern                            | SCP          | System    | Complexity      | Hirzalla et al.       |    [1] |              yes |                    yes |      yes |
 | Inverse of Average Number of Used Message              | IAUM         | System    | Cohesion        | Shim et al.           |    [3] |              yes |                    yes |      yes |
 | Number of Services                                     | NS           | System    | Size            | Shim et al.           |    [3] |              yes |                    yes |      yes |
-| Mean Absolute Importance/Dependence in the System      | MAIDS        | System    | Coupling        | Schlinger             |    --- |              yes |                    yes |      yes |
-| Mean Absolute Coupling in the System                   | MACS         | System    | Coupling        | Schlinger             |    --- |              yes |                    yes |      yes |
-| Dynamic Relative Dependence of Service                 | DRDS         | Service   | Coupling        | Schlinger             |    --- |              yes |                    yes |      yes |
-| Dynamic Relative Importance of Service                 | DRIS         | Service   | Coupling        | Schlinger             |    --- |              yes |                    yes |      yes |
-| Dynamic Relative Dependence of Service in the System   | DRDSS        | Service   | Coupling        | Schlinger             |    --- |              yes |                    yes |      yes |
-| Dynamic Relative Importance of Service in the System   | DRISS        | Service   | Coupling        | Schlinger             |    --- |              yes |                    yes |      yes |
-| Cyclic Service Dependencies                            | CSD          | System    | Complexity      | Schlinger             |    --- |              yes |                    yes |      yes |
+| Mean Absolute Importance/Dependence in the System      | MAIDS        | System    | Coupling        | Schlinger et al.      |    --- |              yes |                    yes |      yes |
+| Mean Absolute Coupling in the System                   | MACS         | System    | Coupling        | Schlinger et al.      |    --- |              yes |                    yes |      yes |
+| Dynamic Relative Dependence of Service                 | DRDS         | Service   | Coupling        | Schlinger et al.      |    --- |              yes |                    yes |      yes |
+| Dynamic Relative Importance of Service                 | DRIS         | Service   | Coupling        | Schlinger et al.      |    --- |              yes |                    yes |      yes |
+| Dynamic Relative Dependence of Service in the System   | DRDSS        | Service   | Coupling        | Schlinger et al.      |    --- |              yes |                    yes |      yes |
+| Dynamic Relative Importance of Service in the System   | DRISS        | Service   | Coupling        | Schlinger et al.      |    --- |              yes |                    yes |      yes |
+| Cyclic Service Dependencies                            | CSD          | System    | Complexity      | Schlinger et al.      |    --- |              yes |                    yes |      yes |
 | System's CentraliZation                                | SCZ          | System    | Centralization  | Hofmeister et al.     |    [2] |               no |                    yes |       no |
 | Weighted Intra-Service Coupling between Elements       | WISCE        | Element   | Coupling        | Perepletchikov et al. |    [5] |              yes |                     no |       no |
 | Weighted Extra-Service Incoming Coupling of an Element | WESICE       | Element   | Coupling        | Perepletchikov et al. |    [5] |              yes |                     no |       no |
@@ -76,7 +76,19 @@ We collected a set of 58 service-based maintainability metrics proposed in scien
 
 ## Newly Designed Metrics
 
-The 7 metrics adapted by us are described in this section. Metric formalization is based on the set of services *S* that contains individual services, e.g. *s<sub>1</sub>, s<sub>2</sub> &isin; S*. The function *ID(s)* returns the number of incoming dependencies for *s*, i.e. the number of other services that depend on *s*. Likewise, *OD(s)* returns the number of outgoing dependencies of *s*. The set *D(S)* contains all dependencies between services in *S*. The function *cycles(D)* returns the set of cyclic dependencies within *D*. Lastly, the function *calls(s<sub>1</sub>, s<sub>2</sub>, t)* returns the number of calls from *s<sub>1</sub>* to *s<sub>2</sub>* within timeframe *t*. All incoming calls to *s<sub>1</sub>* within *t* are indicated by *calls(\*, s<sub>1</sub>, t)* while all outgoing calls from *s<sub>1</sub>* within *t* are indicated by *calls(s<sub>1</sub>, \*, t)*. The total number of calls in *S* during *t* is indicated by *calls(\*, \*, t)*.
+The 7 metrics adapted by us are described in this section. Metric formalization is based on the following entities:
+
+- The set of services *S* contains individual services, e.g. *s<sub>1</sub>, s<sub>2</sub> &isin; S*.
+- The function *ID(s)* returns the number of incoming dependencies for *s*, i.e. the number of other services that depend on *s*.
+- The function *OD(s)* returns the number of outgoing dependencies of *s*, i.e. the number of other services *s* depends on.
+- The set *D(S)* contains all dependencies between services in *S*.
+- The function *cycles(D)* returns the set of cyclic dependencies within *D*.
+- The function *calls(s<sub>1</sub>, s<sub>2</sub>, t)* returns the number of calls from *s<sub>1</sub>* to *s<sub>2</sub>* within timeframe *t*. 
+  - All incoming calls to *s<sub>1</sub>* within *t* are indicated by *calls(\*, s<sub>1</sub>, t)*
+  - All outgoing calls from *s<sub>1</sub>* within *t* are indicated by *calls(s<sub>1</sub>, \*, t)*.
+  - The total number of calls in *S* during *t* is indicated by *calls(\*, \*, t)*.
+
+<br/><br/>
 
 ### Mean Absolute Importance/Dependence in the System (MAIDS)
 
