@@ -98,7 +98,7 @@ This metric is a system-wide variant of AIS/ADS [7]. It returns the mean number 
 
 ### Mean Absolute Coupling in the System (MACS)
 
-This metric is a system-wide variant of ACS [7]. It analyzes the degree of coupling in *S* by calculating the mean number of dependencies from both side, incoming as well as outgoing. The value range of MACS is [0, 2 \* (|*S*| - 1)].
+This metric is a system-wide variant of ACS [7]. It analyzes the degree of coupling in *S* by calculating the mean number of dependencies from both sides, incoming as well as outgoing. The value range of MACS is [0, 2 \* (|*S*| - 1)].
 
 ![MACS Formula](https://latex.codecogs.com/svg.latex?%5Clarge%20MACS%28S%29%20%3D%20%5Cfrac%7B%20%5Csum%5Climits_%7Bs%20%5Cin%20S%7D%20%5CBig%28%20ID%28s%29%20+%20OD%28s%29%20%5CBig%29%20%7D%7B%20%7CS%7C%20%7D%20%3D%202%20*%20MAIDS%28S%29)
 
