@@ -15,7 +15,7 @@ This Java CLI application uses operational data produced by service- or microser
 mvn clean install
 
 # display a list of possible parameters
-java -jar target/ms-runtime-analysis-1.0.0.jar --help
+java -jar target/ms-runtime-analysis-1.0.1.jar --help
 usage: Microservices Maintainability Analysis via Runtime Data
  -h,--help                       Show help
  -d,--debug                      Enable debug output
@@ -37,7 +37,7 @@ usage: Microservices Maintainability Analysis via Runtime Data
                                  elements
 
 # example run with a local Zipkin instance with collected runtime data
-java -jar target/ms-runtime-analysis-1.0.0.jar \
+java -jar target/ms-runtime-analysis-1.0.1.jar \
     --start_date "2019/01/01 00:00:00" \
     --end_date "now" \
     --integrators "zipkin" \
