@@ -23,4 +23,4 @@ jobs:
       env:
         SONAR_LOGIN: ${{ secrets.SONAR_LOGIN }}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: mvn sonar:sonar -Dsonar.login=$SONAR_LOGIN
+      run: mvn clean verify sonar:sonar -Dsonar.login=$SONAR_LOGIN

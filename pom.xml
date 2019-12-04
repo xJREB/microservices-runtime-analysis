@@ -16,6 +16,8 @@
         <tag>HEAD</tag>
     </scm>
     <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <sonar.projectName>Microservices Maintainability Runtime Analysis</sonar.projectName>
         <sonar.projectKey>xJREB_microservices-runtime-analysis</sonar.projectKey>
         <sonar.organization>xjreb-github</sonar.organization>
